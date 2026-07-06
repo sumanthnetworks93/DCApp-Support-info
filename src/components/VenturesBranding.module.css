@@ -29,7 +29,13 @@
 
 .line {
   font-size: clamp(11px, 2.5vw, 13px);
-  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .line {
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 .name {

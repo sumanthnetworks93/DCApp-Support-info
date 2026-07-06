@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 import AppStoreButtons from "../components/AppStoreButtons";
 import {
   APP_NAME,
@@ -8,41 +9,35 @@ import {
   PRIVACY_EMAIL,
   SUPPORT_EMAIL,
 } from "../constants";
+import { faq } from "../content/siteContent";
 import styles from "./Support.module.css";
-
-const FAQ = [
-  {
-    q: "How do I download the app?",
-    a: "Download Desi Connects free on the App Store using the button above. Android is not available yet.",
-  },
-  {
-    q: "Who can use Desi Connects?",
-    a: `Users must be ${MIN_AGE}+. The app is currently available in ${LAUNCH_AREA}. California is not supported at this time.`,
-  },
-  {
-    q: "How do I delete my account?",
-    a: "Profile → Help → Delete Account in the app. Deletion is permanent.",
-  },
-  {
-    q: "How do I reset my PIN?",
-    a: "Tap Forgot PIN on the login screen and answer your security questions.",
-  },
-  {
-    q: "How do I report content?",
-    a: "Tap ••• on any post or listing and select Report. We review within 24–48 hours. You can also email support.",
-  },
-  {
-    q: "Does the app handle payments or bookings?",
-    a: "No. Desi Connects connects users — transactions happen outside the app.",
-  },
-];
 
 export default function Support() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const body = new URLSearchParams();
+    for (const [key, value] of formData.entries()) {
+      body.append(key, String(value));
+    }
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+      if (!response.ok) throw new Error("submit failed");
+      setSubmitted(true);
+    } catch {
+      setError("Could not send your message. Please email us directly.");
+    }
   }
 
   return (
@@ -71,15 +66,33 @@ export default function Support() {
         <p><strong>Support:</strong> <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></p>
         <p><strong>Privacy:</strong> <a href={`mailto:${PRIVACY_EMAIL}`}>{PRIVACY_EMAIL}</a></p>
         <p className={styles.response}>We typically respond within 1–2 business days.</p>
+        <p>
+          <Link to="/account-deletion">Account deletion instructions</Link>
+        </p>
       </div>
 
+      <h2 className={styles.faqTitle}>Frequently asked questions</h2>
       <div className={styles.faqList}>
-        {FAQ.map((item) => (
+        {faq.map((item) => (
           <details key={item.q} className={styles.faqItem}>
             <summary>{item.q}</summary>
             <p>{item.a}</p>
           </details>
         ))}
+        <details className={styles.faqItem}>
+          <summary>Who can use Desi Connects?</summary>
+          <p>
+            Users must be {MIN_AGE}+. The app is currently available in {LAUNCH_AREA}.
+            California is not supported at this time.
+          </p>
+        </details>
+        <details className={styles.faqItem}>
+          <summary>How do I download the app?</summary>
+          <p>
+            Download {APP_NAME} free on the App Store using the button above. Android is
+            not available yet.
+          </p>
+        </details>
       </div>
 
       {submitted ? (
@@ -107,6 +120,7 @@ export default function Support() {
             rows={4}
             placeholder="How can we help?"
           />
+          {error ? <p className={styles.error}>{error}</p> : null}
           <button type="submit">Send message</button>
         </form>
       )}

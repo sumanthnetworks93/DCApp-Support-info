@@ -9,6 +9,7 @@ import DoNotSell from "./pages/DoNotSell";
 import Support from "./pages/Support";
 import About from "./pages/About";
 import Safety from "./pages/Safety";
+import AccountDeletion from "./pages/AccountDeletion";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="privacy" element={<Privacy />} />
         <Route path="terms" element={<Terms />} />
         <Route path="community-guidelines" element={<CommunityGuidelines />} />
+        <Route path="account-deletion" element={<AccountDeletion />} />
         <Route path="dmca" element={<Dmca />} />
         <Route path="do-not-sell" element={<DoNotSell />} />
         <Route path="support" element={<Support />} />

@@ -4,7 +4,7 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(165deg, #ffffff 0%, #fffaf5 45%, #ffffff 100%);
+  background: linear-gradient(165deg, #fff8ea 0%, #fff3dc 45%, #fff8ea 100%);
 }
 
 .grid {

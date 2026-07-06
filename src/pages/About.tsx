@@ -8,15 +8,17 @@ import {
   MIN_AGE,
   SUPPORT_EMAIL,
 } from "../constants";
+import {
+  appDescription,
+  authMethods,
+  categoryHubs,
+  marketplaceDisclaimer,
+} from "../content/siteContent";
 
 export default function About() {
   return (
     <LegalPage title={`About ${APP_NAME}`} lastUpdated={LAST_UPDATED}>
-      <p>
-        <strong>{APP_NAME}</strong> is a free, community-first mobile app for the Indian
-        diaspora — a trusted local directory where members browse listings, discover verified
-        businesses, post to a community feed, and connect around services relevant to NRIs.
-      </p>
+      <p>{appDescription}</p>
 
       <h2>Who We Are</h2>
       <p>
@@ -29,14 +31,14 @@ export default function About() {
       <ul>
         <li>Browse and post local listings — housing, cars, jobs, services, events, and more</li>
         <li>Community feed with posts, likes, and comments</li>
-        <li>Message other users and contact businesses</li>
         <li>Discover verified local businesses</li>
+        <li>Category hubs: {categoryHubs.join(", ")}</li>
+        <li>Sign up as Personal or Business — auth via {authMethods}</li>
       </ul>
 
       <h2>What We Don&apos;t Do</h2>
+      <p>{marketplaceDisclaimer}</p>
       <ul>
-        <li>No in-app booking or scheduling</li>
-        <li>No in-app payments or escrow</li>
         <li>No nationwide coverage at launch — currently {LAUNCH_AREA} only</li>
         <li>California is not supported at this time</li>
       </ul>
@@ -49,9 +51,13 @@ export default function About() {
 
       <h2>Contact</h2>
       <p>
+        <strong>General &amp; support:</strong>{" "}
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+      </p>
+      <p>
+        <a href={appPath("/support")}>Help &amp; Support</a>
         {" · "}
-        <a href={appPath("/support")}>Support</a>
+        <a href={appPath("/account-deletion")}>Account Deletion</a>
       </p>
     </LegalPage>
   );

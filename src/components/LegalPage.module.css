@@ -30,6 +30,24 @@
   margin: var(--space-4) 0 var(--space-1);
 }
 
+.content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: var(--space-3) 0 var(--space-1);
+}
+
+.content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: var(--space-2) 0 var(--space-1);
+}
+
+.content ol {
+  padding-left: var(--space-3);
+}
+
 .content h2:first-child {
   margin-top: 0;
 }
@@ -44,7 +62,7 @@
 }
 
 .content a {
-  color: var(--ink);
+  color: var(--accent);
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 2px;

@@ -9,9 +9,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 248, 234, 0.85);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid var(--border-light);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
   animation: headerSlide 0.6s ease;
 }
@@ -58,6 +58,24 @@
 .active {
   color: var(--ink);
   border-color: var(--border);
+}
+
+@media (max-width: 640px) {
+  .headerInner {
+    flex-wrap: wrap;
+    gap: var(--space-1);
+  }
+
+  .headerNav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+
+  .navLink {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 
 

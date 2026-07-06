@@ -1,6 +1,8 @@
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  gap: var(--space-2);
 }
 
 .btn {
@@ -54,10 +56,28 @@
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.25);
   background: var(--accent);
   border-color: var(--accent);
   color: var(--white);
+}
+
+.comingSoon {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--muted);
+  border-color: var(--muted);
+}
+
+.comingSoon:hover {
+  transform: none;
+  box-shadow: none;
+  background: var(--muted);
+  border-color: var(--muted);
+}
+
+.comingSoon::before {
+  display: none;
 }
 
 @media (max-width: 900px) {

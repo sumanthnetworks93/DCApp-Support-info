@@ -6,9 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Desi Connects — free local desi directory for Houston & DFW. Listings, messaging, and events. Operated by Sparkle LLC. 18+ only."
+      content="Desi Connects (NRI Connect) — free community app for the Indian diaspora in Houston & DFW. Listings, feed, verified businesses. Operated by Sparkle LLC. 18+ only."
     />
+    <meta name="theme-color" content="#FFF8EA" />
     <title>Desi Connects — NRI Community App</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Desi Connects" />
+    <meta property="og:title" content="Desi Connects — NRI Community App" />
+    <meta
+      property="og:description"
+      content="Free community app for the Indian diaspora. Browse listings, join the feed, discover verified local businesses in Houston & DFW."
+    />
+    <meta property="og:url" content="https://nriconnect.com/" />
+    <meta property="og:image" content="https://nriconnect.com/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Desi Connects — NRI Community App" />
+    <meta
+      name="twitter:description"
+      content="Free community app for the Indian diaspora in Houston & DFW."
+    />
+    <meta name="twitter:image" content="https://nriconnect.com/og-image.svg" />
+
+    <link rel="canonical" href="https://nriconnect.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +42,11 @@
     />
   </head>
   <body>
+    <!-- Netlify form detection (SPA) -->
+    <form name="support" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

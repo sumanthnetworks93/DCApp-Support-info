@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FFF8EA"/>
+  <circle cx="980" cy="120" r="180" fill="#FF6B35" opacity="0.15"/>
+  <circle cx="200" cy="520" r="220" fill="#FF7A1A" opacity="0.12"/>
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="800" fill="#1A1410">Desi Connects</text>
+  <text x="80" y="350" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="500" fill="#6B5F52">Your local NRI community  Houston &amp; DFW</text>
+  <rect x="80" y="400" width="220" height="56" rx="28" fill="#FF6B35"/>
+  <text x="110" y="438" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF">Download on App Store</text>
+</svg>

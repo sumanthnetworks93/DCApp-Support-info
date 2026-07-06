@@ -24,6 +24,14 @@ export default function Layout() {
               About
             </NavLink>
             <NavLink
+              to="/account-deletion"
+              className={({ isActive }) =>
+                isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+              }
+            >
+              Delete Account
+            </NavLink>
+            <NavLink
               to="/support"
               className={({ isActive }) =>
                 isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
