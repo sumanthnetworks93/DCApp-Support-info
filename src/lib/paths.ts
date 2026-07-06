@@ -1,0 +1,6 @@
+/** Internal app path — respects Vite base (GitHub Pages subpath or root on Netlify). */
+export function appPath(path: string): string {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${normalized}` || "/";
+}

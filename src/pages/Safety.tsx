@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import { APP_NAME, LAST_UPDATED, SUPPORT_EMAIL } from "../constants";
 
 export default function Safety() {
@@ -47,7 +48,7 @@ export default function Safety() {
         <li>Scams, fraud, and misleading listings</li>
         <li>Hate speech, harassment, and impersonation</li>
         <li>Illegal content and spam</li>
-        <li>Content that violates our <a href="/community-guidelines">Community Guidelines</a></li>
+        <li>Content that violates our <a href={appPath("/community-guidelines")}>Community Guidelines</a></li>
       </ul>
 
       <h2>Account Actions</h2>
@@ -58,11 +59,11 @@ export default function Safety() {
 
       <h2>Get Help</h2>
       <p>
-        <a href="/support">Support page</a>
+        <a href={appPath("/support")}>Support page</a>
         {" · "}
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
         {" · "}
-        <a href="/community-guidelines">Community Guidelines</a>
+        <a href={appPath("/community-guidelines")}>Community Guidelines</a>
       </p>
     </LegalPage>
   );

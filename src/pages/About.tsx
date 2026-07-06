@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import {
   APP_NAME,
   LAST_UPDATED,
@@ -50,7 +51,7 @@ export default function About() {
       <p>
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
         {" · "}
-        <a href="/support">Support</a>
+        <a href={appPath("/support")}>Support</a>
       </p>
     </LegalPage>
   );

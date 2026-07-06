@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { LEGAL_ENTITY } from "../constants";
+import AmbientBackground from "./AmbientBackground";
 import FooterLinks from "./FooterLinks";
 import LiveChat from "./LiveChat";
 import Logo from "./Logo";
@@ -9,6 +10,7 @@ import styles from "./Layout.module.css";
 export default function Layout() {
   return (
     <div className={styles.shell}>
+      <AmbientBackground />
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Logo />

@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import {
   APP_NAME,
   LAST_UPDATED,
@@ -61,7 +62,7 @@ export default function DoNotSell() {
         {LEGAL_ENTITY}
       </p>
       <p>
-        See also our <a href="/privacy">Privacy Policy</a>.
+        See also our <a href={appPath("/privacy")}>Privacy Policy</a>.
       </p>
     </LegalPage>
   );

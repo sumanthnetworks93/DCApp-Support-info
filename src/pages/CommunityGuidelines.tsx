@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import { APP_NAME, LAST_UPDATED, LAUNCH_AREA, SUPPORT_EMAIL } from "../constants";
 
 export default function CommunityGuidelines() {
@@ -69,7 +70,7 @@ export default function CommunityGuidelines() {
       <p>
         Businesses apply through admin review. A verified badge means we have reviewed the
         business application — it is not a guarantee of quality or legality. See our{" "}
-        <a href="/safety">Safety page</a> for more on verification and blocking.
+        <a href={appPath("/safety")}>Safety page</a> for more on verification and blocking.
       </p>
 
       <h2>Contact</h2>

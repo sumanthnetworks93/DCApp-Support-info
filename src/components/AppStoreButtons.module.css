@@ -1,9 +1,10 @@
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -15,8 +16,27 @@
   background: var(--ink);
   color: var(--white);
   border: 1px solid var(--ink);
-  transition: background 0.15s, color 0.15s;
   min-width: 200px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
 }
 
 .btn span {
@@ -33,8 +53,17 @@
 }
 
 .btn:hover {
-  background: var(--white);
-  color: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .buttons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {

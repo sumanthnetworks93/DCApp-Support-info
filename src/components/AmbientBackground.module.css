@@ -1,0 +1,114 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(165deg, #ffffff 0%, #fffaf5 45%, #ffffff 100%);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%);
+  animation: gridDrift 24s linear infinite;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.orb1 {
+  width: 420px;
+  height: 420px;
+  top: -8%;
+  right: -6%;
+  background: radial-gradient(circle, #ff8c42 0%, #ff6b3520 70%);
+  animation: float1 14s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 360px;
+  height: 360px;
+  bottom: 5%;
+  left: -8%;
+  background: radial-gradient(circle, #ffd4a8 0%, #ffb08830 70%);
+  animation: float2 18s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 280px;
+  height: 280px;
+  top: 40%;
+  left: 45%;
+  background: radial-gradient(circle, #ffe8cc 0%, transparent 70%);
+  animation: float3 12s ease-in-out infinite;
+}
+
+.ring {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 53, 0.08);
+  animation: ringPulse 8s ease-in-out infinite;
+}
+
+.ring::before,
+.ring::after {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 107, 53, 0.06);
+}
+
+.ring::after {
+  inset: 90px;
+  border-color: rgba(255, 107, 53, 0.04);
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 40px) scale(1.08); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.05); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(20px, -20px); }
+  66% { transform: translate(-25px, 15px); }
+}
+
+@keyframes gridDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(48px); }
+}
+
+@keyframes ringPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.06); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb,
+  .ring,
+  .grid {
+    animation: none;
+  }
+}

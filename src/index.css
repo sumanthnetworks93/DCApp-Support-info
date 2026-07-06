@@ -13,7 +13,8 @@
   --muted: #737373;
   --border: #e5e5e5;
   --border-light: #f0f0f0;
-  --accent: #111111;
+  --accent: #ff6b35;
+  --accent-glow: rgba(255, 107, 53, 0.25);
   --white: #ffffff;
   --radius-sm: 6px;
   --radius-md: 10px;

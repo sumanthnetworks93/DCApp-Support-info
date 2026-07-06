@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import {
   APP_NAME,
   LAST_UPDATED,
@@ -111,7 +112,7 @@ export default function Privacy() {
         <li>Request a copy of your data or raise privacy concerns by emailing us</li>
         <li>
           California residents: see our{" "}
-          <a href="/do-not-sell">Do Not Sell My Personal Information</a> page.{" "}
+          <a href={appPath("/do-not-sell")}>Do Not Sell My Personal Information</a> page.{" "}
           {APP_NAME} is not currently available to users in California.
         </li>
       </ul>

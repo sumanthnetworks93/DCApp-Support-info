@@ -1,4 +1,5 @@
 import LegalPage from "../components/LegalPage";
+import { appPath } from "../lib/paths";
 import {
   APP_NAME,
   LAST_UPDATED,
@@ -56,7 +57,7 @@ export default function Terms() {
       </ul>
 
       <h2>4. Acceptable Use</h2>
-      <p>You agree not to post false, misleading, fraudulent, harassing, or illegal content; impersonate others; spam or scrape the Service; or circumvent security features. See our <a href="/community-guidelines">Community Guidelines</a> for full standards.</p>
+      <p>You agree not to post false, misleading, fraudulent, harassing, or illegal content; impersonate others; spam or scrape the Service; or circumvent security features. See our <a href={appPath("/community-guidelines")}>Community Guidelines</a> for full standards.</p>
 
       <h2>5. User Content & License</h2>
       <p>
@@ -133,7 +134,7 @@ export default function Terms() {
       <p>
         Questions about these Terms? Contact{" "}
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> or visit our{" "}
-        <a href="/support">Support page</a>.
+        <a href={appPath("/support")}>Support page</a>.
       </p>
     </LegalPage>
   );
