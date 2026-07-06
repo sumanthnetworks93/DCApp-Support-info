@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" fill="none" role="img" aria-label="ALETI Ventures and Labs Pvt limited, SRA Ventures and Labs">
+  <rect width="540" height="120" rx="12" fill="#000"/>
+  <g font-family="Inter, system-ui, sans-serif" fill="#fff">
+    <text x="270" y="46" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="-0.02em">
+      ALETI Ventures
+    </text>
+    <text x="270" y="46" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="-0.02em">
+      <tspan dx="108"> Labs </tspan>
+      <tspan font-size="22" font-weight="700">Pvt limited</tspan>
+    </text>
+    <path d="M4 7C4 2.8 8.2 1 14 7C19.8 13 24 11.2 24 7C24 2.8 19.8 1 14 7C8.2 13 4 11.2 4 7Z" fill="#fff" transform="translate(262,34) scale(1.05)"/>
+    <text x="270" y="90" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="-0.02em">
+      SRA Ventures
+    </text>
+    <text x="270" y="90" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="-0.02em">
+      <tspan dx="92"> Labs</tspan>
+    </text>
+    <path d="M4 7C4 2.8 8.2 1 14 7C19.8 13 24 11.2 24 7C24 2.8 19.8 1 14 7C8.2 13 4 11.2 4 7Z" fill="#fff" transform="translate(262,78) scale(1.05)"/>
+  </g>
+</svg>

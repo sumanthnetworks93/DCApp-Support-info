@@ -1,0 +1,115 @@
+.hero {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3) var(--space-6);
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: var(--space-1);
+}
+
+.tagline {
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 400px;
+  margin-bottom: var(--space-1);
+}
+
+.info {
+  width: 100%;
+  max-width: 360px;
+  padding: var(--space-2);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: var(--space-2);
+}
+
+.info p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.info strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.info a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legalSection {
+  width: 100%;
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.legalHeading {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.legalNote {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.legalNote a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.legalNote a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: var(--space-1);
+}
+
+.disclaimer a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.venturesBlock {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-light);
+  width: 100%;
+}

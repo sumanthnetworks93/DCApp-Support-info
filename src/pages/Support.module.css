@@ -1,0 +1,142 @@
+.contactBox {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  text-align: left;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contactBox p {
+  margin-bottom: 6px;
+}
+
+.contactBox a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.response {
+  font-size: 12px !important;
+  margin-bottom: 0 !important;
+  margin-top: 4px;
+}
+
+.page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.intro {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.intro a,
+.chatHint {
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.chatHint {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.faqList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: left;
+}
+
+.faqItem {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.faqItem summary {
+  padding: var(--space-2);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem p {
+  padding: 0 var(--space-2) var(--space-2);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form input,
+.form textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  outline: none;
+  background: var(--surface);
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--ink);
+  background: var(--white);
+}
+
+.form button {
+  padding: 14px;
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.form button:hover {
+  opacity: 0.85;
+}
+
+.success {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none;
+}
